@@ -30,7 +30,7 @@ const addProduct = async (req, res) => {
 };
 
 const getProduct = async (req, res) => {
-  let result = await Product.findById(req.params.id);
+  let result = await Product.find({});
   return res.status(200).json(result);
 };
 
