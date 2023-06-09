@@ -3,7 +3,7 @@ const { addProduct, getProduct, deleteProduct, getBySection, getByCategory } = r
 const upload = require('../utilies/multer')
 
 router.post('/add', upload.Multer.single('image'), addProduct)
-router.get('/get/:id' , getProduct)
+router.get('/' , getProduct)
 router.post('/delete' , deleteProduct)
 router.post('/getBySection', getBySection)
 router.post('/getByCategory', getByCategory)
