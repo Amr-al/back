@@ -14,7 +14,7 @@ const signUp = async (req, res) => {
   const password = req.body.password;
   const pic = req.file ? req.file.filename : undefined;
 
-  if (!name || !email || !password || !pic) {
+  if (!name || !email || !password ) {
     res.status(400).json("data is missing");
     return;
   }
@@ -36,7 +36,7 @@ const signUp = async (req, res) => {
         name: name,
         email: email,
         password: hashed,
-        pic: result.url,
+//         pic: result.url,
       });
     } catch {
       return res.status(400).json("Please enter all required fields");
